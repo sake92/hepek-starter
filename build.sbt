@@ -8,7 +8,7 @@ lazy val root = (project in file("."))
     organization := "ba.sake",
     version := "0.0.0-SNAPSHOT",
     libraryDependencies ++= Seq(
-      "ba.sake" %% "hepek" % "0.1.0-alpha1-SNAPSHOT"
+      "ba.sake" %% "hepek" % "0.1.1-SNAPSHOT"
     ),
     resolvers += Resolver.sonatypeRepo("snapshots"),
     (hepek in Compile) := {
