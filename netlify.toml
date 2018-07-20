@@ -7,4 +7,4 @@
 
 [build]
   publish = "target/web/public/main/site"
-  command = "curl https://raw.githubusercontent.com/tototoshi/sbt-install/master/sbt-install > ~/bin/sbt-install && chmod 0755 !#:3 && sbt-install 1.1.0 && sbt hepek"
+  command = "curl https://raw.githubusercontent.com/tototoshi/sbt-install/master/sbt-install > ./sbt-install && chmod 0755 !#:3 && sbt-install -d . 1.1.0 && sbt hepek"
