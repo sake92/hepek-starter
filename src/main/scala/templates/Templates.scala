@@ -18,7 +18,7 @@ trait MyBlogPage extends MyStaticPage with HepekBootstrap3BlogPage {
 trait MyStaticPage extends BootstrapStaticPage with BootstrapGridComponents {
 
   override def siteSettings = SiteSettings(
-    "hello.world",
+    "example.com",
     site.Index,
     List(site.Index, site.About),
     Option(relTo(images.ico("favicon"))),
