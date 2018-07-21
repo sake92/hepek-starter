@@ -21,13 +21,10 @@ object Index extends MyBlogPage {
   /* CONTENT */
   val firstSectionContent =
     md(s"""
-          This **is** some *Markdown*:
-            - yep
-              - it works
-            - fine
-
-          Find more [here]($markdownURL).
-        """)
+      This **is** some *Markdown* (read more about it [here]($markdownURL)):
+        - yep
+        - it works
+    """)
 
   val scalaSectionContent =
     div(
@@ -44,7 +41,7 @@ object Index extends MyBlogPage {
       ),
       row(
         md(s"""
-            Sections, nesting, Table of Contents? Trivial.  
+            Sections, Table of Contents, PDFs? Trivial.  
             Relative links with no hassle? You got it!
         """),
         hyperlink(relTo(About))("Click here!")
@@ -52,11 +49,13 @@ object Index extends MyBlogPage {
     )
 
   // add footer
-  override def pageContent =
+  /*
+    override def pageContent =
     frag(
       super.pageContent,
       div(cls := "well well-lg col-md-8 col-md-push-2")(
         md("Override template stuff. Wow! :D")
       )
     )
+ */
 }
