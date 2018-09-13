@@ -8,7 +8,7 @@ lazy val root = (project in file("."))
     organization := "ba.sake",
     version := "0.0.0-SNAPSHOT",
     libraryDependencies ++= Seq(
-      "ba.sake" %% "hepek" % "0.1.1"
+      "ba.sake" %% "hepek" % "0.2.0"
     ),
     (hepek in Compile) := {
       WebKeys.assets.value // run 'assets' after compiling...
