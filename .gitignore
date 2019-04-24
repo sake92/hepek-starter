@@ -28,3 +28,6 @@ target/
 
 .idea/
 root.iml
+
+.bloop/
+.metals/

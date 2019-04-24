@@ -7,12 +7,10 @@ import utils.Imports._, grid._
 object Index extends templates.MyBlogPage {
 
   override def pageSettings =
-    super.pageSettings
-      .withTitle("Hello world!")
+    super.pageSettings.withTitle("Hello world!")
 
   override def blogSettings =
-    super.blogSettings
-      .withSections(firstSection, secondSection)
+    super.blogSettings.withSections(firstSection, secondSection)
 
   /* CONSTS */
   val markdownURL =

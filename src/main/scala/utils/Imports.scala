@@ -2,11 +2,11 @@ package utils
 
 import ba.sake.hepek.html.component.BasicComponents
 import ba.sake.hepek.Resources
-import ba.sake.hepek.bootstrap3.component.BootstrapGridComponents
+import ba.sake.hepek.bootstrap3.BootstrapBundle
 
-object Imports extends BasicComponents {
+object Imports extends BootstrapBundle with BasicComponents {
 
-  object grid extends BootstrapGridComponents {
+  object grid extends Grid {
 
     override def screenRatios =
       super.screenRatios

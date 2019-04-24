@@ -1,10 +1,9 @@
 package templates
 
 import java.time.LocalDate
-import ba.sake.hepek.bootstrap3.statik.BootstrapStaticPage
 import ba.sake.hepek.html.structure.{Dependencies, Dependency}
 import ba.sake.hepek.theme.bootstrap3.HepekBootstrap3BlogPage
-import utils.Imports.resources._
+import utils.Imports._, resources._
 
 // settings for BLOG static pages
 trait MyBlogPage extends MyStaticPage with HepekBootstrap3BlogPage {
@@ -15,7 +14,7 @@ trait MyBlogPage extends MyStaticPage with HepekBootstrap3BlogPage {
 }
 
 // settings for ALL static pages
-trait MyStaticPage extends BootstrapStaticPage {
+trait MyStaticPage extends StatikPage {
 
   override def siteSettings =
     super.siteSettings

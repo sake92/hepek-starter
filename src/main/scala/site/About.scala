@@ -6,8 +6,7 @@ import utils.Imports._
 object About extends templates.MyStaticPage {
 
   override def pageSettings =
-    super.pageSettings
-      .withTitle("About")
+    super.pageSettings.withTitle("About")
 
   override def pageContent = frag(
     div(cls := "page-header text-center")(
@@ -20,7 +19,7 @@ object About extends templates.MyStaticPage {
         This is a custom page, using a different template (also called layout in other SSGs).
         
         Here's a typesafe link to [second section](${Index.secondSection.ref}) (almost impossible to make a mistake! :D)
-      """.md,
+      """.md
     )
   )
 
