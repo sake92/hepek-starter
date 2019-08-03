@@ -1,7 +1,6 @@
 package site
 
 import scalatags.Text.all._
-import ba.sake.hepek.implicits._
 import utils.Imports._, grid._
 
 object Index extends templates.MyBlogPage {
@@ -13,8 +12,7 @@ object Index extends templates.MyBlogPage {
     super.blogSettings.withSections(firstSection, secondSection)
 
   /* CONSTS */
-  val markdownURL =
-    "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+  val markdownURL = "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
 
   /* CONTENT */
   val firstSection = Section("First section", s"""
@@ -27,9 +25,9 @@ object Index extends templates.MyBlogPage {
     "Second section",
     div(
       row(
-        third1("Need help from a real programming language?"),
-        third2("Have it check you can properly nest these rows, columns etc?"),
-        third3(
+        third("Need help from a real programming language?"),
+        third("Have it check you can properly nest these rows, columns etc?"),
+        third(
           ul(
             List("How", "awesome", "is", "that?").map(s => li(s))
           )
@@ -39,8 +37,11 @@ object Index extends templates.MyBlogPage {
         s"""
           Sections, Table of Contents, PDFs? Trivial.  
           Relative links with no hassle? You got it!
-        """.md,
-        hyperlink(About.ref)("Click here!")
+          [Click here!](${About.ref})
+
+          Docs? [here](https://sake92.github.io/hepek/index.html)  
+          Examples? [here](https://github.com/sake92/hepek-examples)
+        """.md
       )
     )
   )

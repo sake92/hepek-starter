@@ -9,16 +9,14 @@ object About extends templates.MyStaticPage {
     super.pageSettings.withTitle("About")
 
   override def pageContent = frag(
-    div(cls := "page-header text-center")(
-      h1("About")
-    ),
-    div(cls := "well well-lg ")(
+    div(cls := "well well-lg", classes.txtAlignCenter)(
       s"""
-        About me...  TODO :p
+        ## About me...  TODO
 
-        This is a custom page, using a different template (also called layout in other SSGs).
+        This is a custom page, using a different template.
         
-        Here's a typesafe link to [second section](${Index.secondSection.ref}) (almost impossible to make a mistake! :D)
+        Here's a typesafe link to [second section](${Index.secondSection.ref}) 
+        (almost impossible to make a mistake! :D)
       """.md
     )
   )
