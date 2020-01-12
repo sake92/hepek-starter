@@ -1,15 +1,15 @@
 package site
 
 import scalatags.Text.all._
-import utils.Imports._
+import utils.Imports._, Classes._
 
 object About extends templates.MyStaticPage {
 
   override def pageSettings =
     super.pageSettings.withTitle("About")
 
-  override def pageContent = frag(
-    div(cls := "well well-lg", classes.txtAlignCenter)(
+  override def pageContent =
+    div(cls := "well well-lg", txtAlignCenter)(
       s"""
         ## About me...  TODO
 
@@ -19,6 +19,5 @@ object About extends templates.MyStaticPage {
         (almost impossible to make a mistake! :D)
       """.md
     )
-  )
 
 }

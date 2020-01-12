@@ -3,8 +3,6 @@ package templates
 import java.time.LocalDate
 import scalatags.Text.all._
 import ba.sake.hepek.theme.bootstrap3.HepekBootstrap3BlogPage
-import ba.sake.hepek.theme.bootstrap3.TocType
-import ba.sake.hepek.bootstrap3.component.BootstrapNavbarComponents
 import ba.sake.hepek.Resources._
 import utils.Imports._
 
@@ -33,7 +31,7 @@ trait MyStaticPage extends StaticPage {
       .withFaviconNormal(images.ico("favicon").ref)
       .withFaviconInverted(images.ico("favicon").ref)
 
-  override def navbar = Some(BootstrapNavbarComponents)
+  override def navbar = Some(Navbar)
 
   // custom bootstrap theme
   override def bootstrapDependencies = super.bootstrapDependencies.withCssDependencies(
