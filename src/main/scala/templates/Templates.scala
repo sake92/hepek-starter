@@ -4,7 +4,7 @@ import java.time.LocalDate
 import scalatags.Text.all._
 import ba.sake.hepek.theme.bootstrap3.HepekBootstrap3BlogPage
 import ba.sake.hepek.Resources._
-import utils.Imports._
+import utils.Imports.Bundle._
 
 // settings for BLOG static pages
 trait MyBlogPage extends MyStaticPage with HepekBootstrap3BlogPage {

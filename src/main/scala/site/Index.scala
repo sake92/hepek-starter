@@ -1,7 +1,7 @@
 package site
 
 import scalatags.Text.all._
-import utils.Imports._, grid._
+import utils.Imports.Bundle._, Grid._
 
 object Index extends templates.MyBlogPage {
 
@@ -11,15 +11,15 @@ object Index extends templates.MyBlogPage {
   override def blogSettings =
     super.blogSettings.withSections(firstSection, secondSection)
 
-  /* CONSTS */
-  val markdownURL = "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
-
   /* CONTENT */
-  val firstSection = Section("First section", s"""
-      This **is** some *Markdown* (read more about it [here]($markdownURL)):
+  val firstSection = Section(
+    "First section",
+    s"""
+      This is some *Markdown*:
         - yep
-        - it works
-    """.md)
+        - it **works**
+    """.md
+  )
 
   val secondSection = Section(
     "Second section",
@@ -45,15 +45,4 @@ object Index extends templates.MyBlogPage {
       )
     )
   )
-
-  // add footer
-  /*
-    override def pageContent =
-    frag(
-      super.pageContent,
-      div(cls := "well well-lg col-md-8 col-md-push-2")(
-        "Override template stuff. Wow! :D"
-      )
-    )
- */
 }
