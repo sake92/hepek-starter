@@ -5,6 +5,8 @@ import scalatags.Text.all._
 import ba.sake.hepek.theme.bootstrap3.HepekBootstrap3BlogPage
 import ba.sake.hepek.Resources._
 import utils.Imports.Bundle._
+import ba.sake.hepek.theme.bootstrap3.TocSettings
+import ba.sake.hepek.theme.bootstrap3.TocType
 
 // settings for BLOG static pages
 trait MyBlogPage extends MyStaticPage with HepekBootstrap3BlogPage {
@@ -15,6 +17,8 @@ trait MyBlogPage extends MyStaticPage with HepekBootstrap3BlogPage {
       .withCreateDate(LocalDate.of(2019, 5, 5))
 
   override def pageHeader = None
+
+  override def tocSettings = TocSettings(tocType = Some(TocType.Scrollspy(offset = 60)))
 }
 
 // settings for ALL static pages
@@ -36,13 +40,10 @@ trait MyStaticPage extends StaticPage {
   // custom bootstrap theme
   override def bootstrapDependencies = super.bootstrapDependencies.withCssDependencies(
     Dependencies()
-      .withDeps(Dependency("spacelab/bootstrap.min.css", bootstrapSettings.version, "bootswatch"))
+      .withDeps(Dependency("readable/bootstrap.min.css", bootstrapSettings.version, "bootswatch"))
   )
 
-  // custom css from /src/main/public/site/styles
-  override def styleURLs = super.styleURLs :+ relTo(styles.css("main"))
+  override def styleURLs = super.styleURLs.appended(styles.css("main").ref)
 
-  // custom js from /src/main/public/site/scripts
-  override def scriptURLs = super.scriptURLs :+ relTo(scripts.js("main"))
-
+  override def scriptURLs = super.scriptURLs.appended(scripts.js("main").ref)
 }

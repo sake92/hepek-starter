@@ -31,3 +31,4 @@ root.iml
 
 .bloop/
 .metals/
+.vscode/

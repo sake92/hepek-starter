@@ -1,14 +1,13 @@
 import com.typesafe.sbt.web.Import.WebKeys
 
-scalaVersion in ThisBuild := "2.13.1"
-scalafmtOnCompile in ThisBuild := true
 
 lazy val root = (project in file("."))
   .settings(
+    scalaVersion := "2.13.3",
+    scalafmtOnCompile := true,
     libraryDependencies ++= Seq(
-      "ba.sake" %% "hepek" % "0.7.0+7-434764e4-SNAPSHOT"
+      "ba.sake" %% "hepek" % "0.8.5"
     ),
-    resolvers += Resolver.sonatypeRepo("snapshots"),
     (hepek in Compile) := {
       WebKeys.assets.value // run 'assets' after compiling...
       (hepek in Compile).value
