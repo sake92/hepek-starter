@@ -1,7 +1,6 @@
 package site
 
-import scalatags.Text.all._
-import utils.Imports.Bundle._, Grid._
+import utils.Bundle._, Grid._, Tags.*
 
 object Index extends templates.MyBlogPage {
 

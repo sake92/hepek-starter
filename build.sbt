@@ -1,16 +1,19 @@
 import com.typesafe.sbt.web.Import.WebKeys
 
-
 lazy val root = (project in file("."))
   .settings(
-    scalaVersion := "2.13.3",
-    scalafmtOnCompile := true,
+    scalaVersion := "3.3.1",
     libraryDependencies ++= Seq(
-      "ba.sake" %% "hepek" % "0.8.5"
+      "ba.sake" %% "hepek" % "0.15.0"
     ),
-    (hepek in Compile) := {
-      WebKeys.assets.value // run 'assets' after compiling...
-      (hepek in Compile).value
+    scalacOptions ++= Seq(
+      "-deprecation",
+      "-Yretain-trees",
+      "-Wunused:all"
+    ),
+    (Compile / hepek) := {
+      WebKeys.assets.value // run 'assets' after compiling
+      (Compile / hepek).value
     },
     WebKeys.webModulesLib := "site/lib",
     openIndexPage := openIndexPageTask.value

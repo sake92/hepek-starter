@@ -1,7 +1,6 @@
 package site
 
-import scalatags.Text.all._
-import utils.Imports.Bundle._, Classes._
+import utils.Bundle.*, Tags.*
 
 object About extends templates.MyStaticPage {
 

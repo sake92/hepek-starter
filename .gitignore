@@ -29,6 +29,7 @@ target/
 .idea/
 root.iml
 
+.bsp/
 .bloop/
 .metals/
 .vscode/
