@@ -1,8 +1,8 @@
 package site
 
-import utils.Bundle.*, Tags.*
+import Bundle.*, Tags.*
 
-object About extends templates.MyStaticPage {
+object About extends MyStaticPage {
 
   override def pageSettings =
     super.pageSettings.withTitle("About")

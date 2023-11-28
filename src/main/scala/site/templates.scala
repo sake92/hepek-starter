@@ -1,9 +1,9 @@
-package templates
+package site
 
 import java.time.LocalDate
 import ba.sake.hepek.theme.bootstrap5.*
 import ba.sake.hepek.Resources.*
-import utils.Bundle._
+import Bundle._
 
 trait MyStaticPage extends StaticPage {
 

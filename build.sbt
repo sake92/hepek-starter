@@ -4,7 +4,7 @@ lazy val root = (project in file("."))
   .settings(
     scalaVersion := "3.3.1",
     libraryDependencies ++= Seq(
-      "ba.sake" %% "hepek" % "0.15.0"
+      "ba.sake" %% "hepek" % "0.17.0"
     ),
     scalacOptions ++= Seq(
       "-deprecation",

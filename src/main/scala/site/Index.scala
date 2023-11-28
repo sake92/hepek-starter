@@ -1,8 +1,8 @@
 package site
 
-import utils.Bundle._, Grid._, Tags.*
+import Bundle._,  Tags.*
 
-object Index extends templates.MyBlogPage {
+object Index extends MyBlogPage {
 
   override def pageSettings =
     super.pageSettings.withTitle("Hello world!")
@@ -27,16 +27,16 @@ object Index extends templates.MyBlogPage {
   val secondSection = Section(
     "Second section",
     div(
-      row(
-        third("Need help from a real programming language?"),
-        third("Have it check you can properly nest these rows, columns etc?"),
-        third(
+      Grid.row(
+        Grid.third("Need help from a real programming language?"),
+        Grid.third("Have it check you can properly nest these rows, columns etc?"),
+        Grid.third(
           ul(
             List("How", "awesome", "is", "that?").map(s => li(s))
           )
         )
       ),
-      row(
+      Grid.row(
         s"""
           Sections, Table of Contents, PDFs? Trivial.  
           Relative links with no hassle? You got it!
