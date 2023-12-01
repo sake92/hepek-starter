@@ -1,5 +1,6 @@
-package site
+package files
 
+import utils.*
 import Bundle._,  Tags.*
 
 object Index extends MyBlogPage {

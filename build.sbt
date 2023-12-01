@@ -1,31 +1,8 @@
-import com.typesafe.sbt.web.Import.WebKeys
-
-lazy val root = (project in file("."))
+lazy val site = (project in file("site"))
   .settings(
     scalaVersion := "3.3.1",
     libraryDependencies ++= Seq(
-      "ba.sake" %% "hepek" % "0.17.0"
-    ),
-    scalacOptions ++= Seq(
-      "-deprecation",
-      "-Yretain-trees",
-      "-Wunused:all"
-    ),
-    (Compile / hepek) := {
-      WebKeys.assets.value // run 'assets' after compiling
-      (Compile / hepek).value
-    },
-    WebKeys.webModulesLib := "site/lib",
-    openIndexPage := openIndexPageTask.value
+      "ba.sake" %% "hepek" % "0.18.0"
+    )
   )
-  .enablePlugins(HepekPlugin, SbtWeb)
-
-val openIndexPage = taskKey[Unit]("Opens index.html")
-
-val openIndexPageTask = Def.taskDyn {
-  Def.task {
-    java.awt.Desktop
-      .getDesktop()
-      .browse(new File(hepekTarget.value + "/site/index.html").toURI)
-  }
-}
+  .enablePlugins(HepekPlugin)

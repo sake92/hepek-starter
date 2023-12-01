@@ -1,4 +1,4 @@
-package site
+package utils
 
 import ba.sake.hepek.bootstrap5.statik.BootstrapStaticBundle
 

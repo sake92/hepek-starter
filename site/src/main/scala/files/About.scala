@@ -1,5 +1,6 @@
-package site
+package files
 
+import utils.*
 import Bundle.*, Tags.*
 
 object About extends MyStaticPage {
