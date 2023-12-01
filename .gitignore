@@ -12,18 +12,8 @@ project/boot/
 project/plugins/project/
 project/project/
 
-# Scala-IDE specific
-.scala_dependencies
-.worksheet
-.cache-main
-.cache-tests
-.classpath
-.project
-.settings/
-
 bin/
 
-# ignore everything in all target/ folders
 target/
 
 .idea/
@@ -33,3 +23,5 @@ root.iml
 .bloop/
 .metals/
 .vscode/
+
+hepek_output/
