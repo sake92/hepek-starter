@@ -13,8 +13,8 @@ project/plugins/project/
 project/project/
 
 bin/
-
 target/
+out/
 
 .idea/
 root.iml

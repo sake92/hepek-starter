@@ -7,3 +7,15 @@ Starter template for static blog with hepek
 Live preview at [Netlify](https://hepek-starter.netlify.com/)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sake92/hepek-starter)
+
+## Usage
+
+```sh
+# mill
+./mill site.hepek
+
+# sbt
+sbt hepek
+```
+
+Site will be renedered in the `site/hepek_output` folder.
