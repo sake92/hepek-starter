@@ -1,4 +1,5 @@
-import $ivy.`ba.sake::mill-hepek::0.0.1`
+
+import $ivy.`ba.sake::mill-hepek::0.0.2`
 
 import mill._
 import mill.scalalib._

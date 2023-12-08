@@ -23,8 +23,9 @@ trait MyStaticPage extends StaticPage {
     )
 
   override def styleURLs = super.styleURLs
-    .appended(Resource("styles/main.css").ref)
+    .appended(files.styles.`main.css`.ref)
 
   override def scriptURLs = super.scriptURLs
-    .appended(Resource("scripts/main.js").ref)
+    .appended(files.scripts.`main.js`.ref)
 }
+
